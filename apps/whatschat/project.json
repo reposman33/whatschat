@@ -1,0 +1,8 @@
+{
+  "name": "whatschat",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/whatschat/src",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
