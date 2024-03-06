@@ -1,10 +1,64 @@
-.avatar{  
-  & img {   
-    width:64px;
-    border-radius: 50%;
-  }
+$balloon__background-color--even: lightgray;
+$balloon__background-color--even-higlight: lighten($balloon__background-color--even,5%);
+$balloon__background-color--odd: lightblue;
+$balloon__background-color--odd-higlight: lighten($balloon__background-color--odd, 5%);
+
+* {
+ font-family: Roboto;
+ font-weight: 400;
 }
 
 .leftPane {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 21px 20px 16px -21px lightgray;
+  width: 22vw;
+  gap: .8vh;
+  height: 90vh;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .32rem;
+  overflow-y: auto;
+  
+  & .balloon {
+    width: 90%;
+    height: 48px;
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 
+    
+    &:nth-child(even) {
+      background-color: $balloon__background-color--even;
+
+      &:hover {
+        background-color: $balloon__background-color--even-higlight;
+      }
+
+    }
+
+    &:nth-child(odd) {
+      background-color: $balloon__background-color--odd;
+
+      &:hover {
+        background-color:$balloon__background-color--odd-higlight;
+      }
+    }
+    
+    & .balloon__title {
+      font-weight: bold;
+      margin: 0 auto;
+    }
+    
+    & .balloon__avatar{  
+      & img {   
+        width:64px;
+        border-radius: 50%;
+      }
+    }
+
+  }
 }
