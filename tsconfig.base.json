@@ -15,10 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ui-components": [
-        "libs/whatschat/ui-components/src/index.ts"
-      ],
       "@images": ["apps/whatschat/public/img"],
+      "@ui-components": ["libs/whatschat/ui-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
