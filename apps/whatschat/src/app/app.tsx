@@ -1,13 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import { LeftPane } from '@ui-components';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="whatschat" />
-    </div>
+    <LeftPane><div>test123</div><div>test123</div></LeftPane>
   );
 }
 
