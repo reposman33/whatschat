@@ -1,7 +1,9 @@
-$balloon__background-color--even: lightgray;
+$balloon__background-color--even: rgb(244, 242, 212);
 $balloon__background-color--even-higlight: lighten($balloon__background-color--even,5%);
-$balloon__background-color--odd: lightblue;
+$balloon__background-color--odd: rgb(235, 241, 244);
 $balloon__background-color--odd-higlight: lighten($balloon__background-color--odd, 5%);
+$balloon__background-color--even-selected: darken($balloon__background-color--even, 40%);
+$balloon__background-color--odd-selected: darken($balloon__background-color--odd, 40%);
 
 * {
  font-family: Roboto;
@@ -33,18 +35,23 @@ $balloon__background-color--odd-higlight: lighten($balloon__background-color--od
     
     &:nth-child(even) {
       background-color: $balloon__background-color--even;
-
+      
       &:hover {
         background-color: $balloon__background-color--even-higlight;
       }
-
+      &.selected {
+        background-color: $balloon__background-color--even-selected;
+      }
     }
-
+    
     &:nth-child(odd) {
       background-color: $balloon__background-color--odd;
-
+      
       &:hover {
         background-color:$balloon__background-color--odd-higlight;
+      }
+      &.selected {
+        background-color: $balloon__background-color--odd-selected;
       }
     }
     

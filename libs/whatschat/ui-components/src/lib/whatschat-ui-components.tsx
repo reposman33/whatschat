@@ -2,6 +2,7 @@ import { PropsWithChildren } from 'react'
 import styles from './whatschat-ui-components.module.scss';
 
 import Stack from '@mui/material/Stack';
+import React from 'react';
 
 // Stack
 type LeftPaneProps = {children: JSX.Element[]}
@@ -21,13 +22,17 @@ export function Avatar(props: AvatarProps) {
 }
 
 // Balloon in left pane
-type BalloonProps = {title: string}
+type BalloonProps = {id: number, title: string, isSelected: boolean, selectBalloon: (id: number) => void}
 
 export function Balloon(props: PropsWithChildren<BalloonProps>) {
-  
-  const {title, children} = props;
+  const {id, title, isSelected, selectBalloon, children} = props;
 
-  return (<div className={styles.balloon}>
+  const classes = styles.balloon +' '+ (isSelected ? styles.selected : '')
+  return (
+    <div
+      className={classes}
+      onClick={() => selectBalloon(id)}
+      >
     <div className={styles.balloon__avatar}>{children}</div>
     <div className={styles.balloon__title}>{title}</div>
     </div>)
