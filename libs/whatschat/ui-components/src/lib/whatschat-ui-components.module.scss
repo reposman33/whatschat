@@ -4,6 +4,8 @@ $balloon__background-color--odd: rgb(235, 241, 244);
 $balloon__background-color--odd-higlight: lighten($balloon__background-color--odd, 5%);
 $balloon__background-color--even-selected: darken($balloon__background-color--even, 40%);
 $balloon__background-color--odd-selected: darken($balloon__background-color--odd, 40%);
+$content-title__background--color: #aeb3e3;
+$content-title--color: #eeeff5;
 
 * {
  font-family: Roboto;
@@ -73,7 +75,7 @@ $balloon__background-color--odd-selected: darken($balloon__background-color--odd
 }
 
 .contentPane {
-  height: 80vh;
+  height: 70vh;
   margin-bottom: .5rem;
   width: 100%;
 }
@@ -89,11 +91,17 @@ $balloon__background-color--odd-selected: darken($balloon__background-color--odd
 
 .contentHeader {
   height: 5vh;
-
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: $content-title__background--color;
+  color: $content-title--color;
+  
   & .contentTitle {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 3rem;
-    margin: 0 auto;
+    text-align: center;
   }
   
 }
