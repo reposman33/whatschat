@@ -24,20 +24,20 @@ export function Avatar(props: AvatarProps) {
 }
 
 
-// Balloon in left pane
-type BalloonProps = {id: number, title: string, isSelected: boolean, selectBalloon: (id: number) => void}
+// ContactCard in left pane
+type ContactCardProps = {id: number, title: string, isSelected: boolean, selectContactCard: (id: number) => void}
 
-export function Balloon(props: PropsWithChildren<BalloonProps>) {
-  const {id, title, isSelected, selectBalloon, children} = props;
+export function ContactCard(props: PropsWithChildren<ContactCardProps>) {
+  const {id, title, isSelected, selectContactCard, children} = props;
 
-  const classes = styles.balloon +' '+ (isSelected ? styles.selected : '')
+  const classes = styles.contactCard +' '+ (isSelected ? styles.selected : '')
   return (
     <div
       className={classes}
-      onClick={() => selectBalloon(id)}
+      onClick={() => selectContactCard(id)}
       >
-    <div className={styles.balloon__avatar}>{children}</div>
-    <div className={styles.balloon__title}>{title}</div>
+    <div className={styles.contactCard__avatar}>{children}</div>
+    <div className={styles.contactCard__title}>{title}</div>
     </div>)
 }
 

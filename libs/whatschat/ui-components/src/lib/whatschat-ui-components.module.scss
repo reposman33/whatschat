@@ -1,9 +1,9 @@
-$balloon__background-color--even: rgb(244, 242, 212);
-$balloon__background-color--even-higlight: lighten($balloon__background-color--even,5%);
-$balloon__background-color--odd: rgb(235, 241, 244);
-$balloon__background-color--odd-higlight: lighten($balloon__background-color--odd, 5%);
-$balloon__background-color--even-selected: darken($balloon__background-color--even, 40%);
-$balloon__background-color--odd-selected: darken($balloon__background-color--odd, 40%);
+$contactCard__background-color--even: rgb(244, 242, 212);
+$contactCard__background-color--even-higlight: lighten($contactCard__background-color--even,5%);
+$contactCard__background-color--odd: rgb(235, 241, 244);
+$contactCard__background-color--odd-higlight: lighten($contactCard__background-color--odd, 5%);
+$contactCard__background-color--even-selected: darken($contactCard__background-color--even, 40%);
+$contactCard__background-color--odd-selected: darken($contactCard__background-color--odd, 40%);
 $content-title__background--color: #aeb3e3;
 $content-title--color: #eeeff5;
 
@@ -27,7 +27,7 @@ $content-title--color: #eeeff5;
   margin-right: .5rem;
   padding: .32rem;
   
-  & .balloon {
+  & .contactCard {
     align-items: center;
     border-radius: 16px;
     cursor: pointer;
@@ -39,33 +39,33 @@ $content-title--color: #eeeff5;
 
     
     &:nth-child(even) {
-      background-color: $balloon__background-color--even;
+      background-color: $contactCard__background-color--even;
       
       &:hover {
-        background-color: $balloon__background-color--even-higlight;
+        background-color: $contactCard__background-color--even-higlight;
       }
       &.selected {
-        background-color: $balloon__background-color--even-selected;
+        background-color: $contactCard__background-color--even-selected;
       }
     }
     
     &:nth-child(odd) {
-      background-color: $balloon__background-color--odd;
+      background-color: $contactCard__background-color--odd;
       
       &:hover {
-        background-color:$balloon__background-color--odd-higlight;
+        background-color:$contactCard__background-color--odd-higlight;
       }
       &.selected {
-        background-color: $balloon__background-color--odd-selected;
+        background-color: $contactCard__background-color--odd-selected;
       }
     }
     
-    & .balloon__title {
+    & .contactCard__title {
       font-weight: bold;
       margin: 0 auto;
     }
     
-    & .balloon__avatar{  
+    & .contactCard__avatar{  
       & img {   
         width:64px;
         border-radius: 50%;

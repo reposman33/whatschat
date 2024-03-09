@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
 import { LeftPane } from '@ui-components';
-import { Balloon }from '@ui-components';
+import { ContactCard }from '@ui-components';
 import { Avatar }from '@ui-components';
 import { ContentPane }from '@ui-components';
 import { ContentHeader }from '@ui-components';
@@ -12,7 +12,7 @@ import React from 'react';
 
 type User = {id: number, url: string, alt: string, title: string};
 const baseURL = 'http://localhost:4200/api/users.json';
-let balloons: JSX.Element[] = [];
+let contactCards: JSX.Element[] = [];
 
 export function App() {
   const [users, setUsers] = React.useState([])
@@ -25,17 +25,17 @@ export function App() {
     })
   },[]);
   
-    balloons = users
+    contactCards = users
     ? users.map((user: User) => 
-      <Balloon
+      <ContactCard
         key={user.id} 
         id={user.id} 
         title={user.title}
-        selectBalloon={(id: number) => setSelectedUser(id)}
+        selectContactCard={(id: number) => setSelectedUser(id)}
         isSelected={selectedUser === user.id}
         >
           <Avatar url={user.url} alt={user.alt}></Avatar>
-        </Balloon>
+        </ContactCard>
     )
     : [];
 
@@ -43,7 +43,7 @@ export function App() {
     <Grid container direction="row">
       <Grid item xs={3}>
         <LeftPane>
-          {balloons}
+          {contactCards}
         </LeftPane>
       </Grid>
       <Grid item xs={9}>
