@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, ReactNode } from 'react'
 import styles from './whatschat-ui-components.module.scss';
 import TextField from '@mui/material/TextField';
 
@@ -28,7 +28,9 @@ export function Avatar(props: AvatarProps) {
 type ContactCardProps = {id: number, title: string, isSelected: boolean, selectContactCard: (id: number) => void}
 
 export function ContactCard(props: PropsWithChildren<ContactCardProps>) {
+  const getRandomNumber = (max: number) => Math.floor(Math.random() * max)
   const {id, title, isSelected, selectContactCard, children} = props;
+  const randomStyle = ['smile','sad','indifferent','chagrined','gleeful','shocked','surprised','happy','disgusted'][getRandomNumber(9)];
 
   const classes = styles.contactCard +' '+ (isSelected ? styles.selected : '')
   return (
@@ -36,16 +38,17 @@ export function ContactCard(props: PropsWithChildren<ContactCardProps>) {
       className={classes}
       onClick={() => selectContactCard(id)}
       >
-    <div className={styles.contactCard__avatar}>{children}</div>
+    <div className={styles.contactCard__avatar +' '+ styles[randomStyle]}>{children}</div>
     <div className={styles.contactCard__title}>{title}</div>
     </div>)
 }
 
 
 // ContentPane
-export function ContentPane() {
+export function ContentPane(props: PropsWithChildren) {
   return (
     <div className={styles.contentPane}>
+      {props.children}
     </div>
   ) 
 }
@@ -66,4 +69,16 @@ export function ContentHeader(props: contentHeaderProps){
     <div className={styles.contentHeader}>
       <div className={styles.contentTitle}>{title}</div>
     </div>)
+}
+
+
+// ChatBubbleComponent
+type ChatBubbleComponentProps = {content: string, datetimestamp: string, mychat: boolean; }
+export function ChatBubbleComponent(props: ChatBubbleComponentProps){
+  const {content, datetimestamp, mychat} = props;
+  return (
+    <div className={mychat ? styles.myChatBubbleComponent + '' : styles.chatBubbleComponent  + ''}>
+
+    </div>
+  );
 }

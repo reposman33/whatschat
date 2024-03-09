@@ -65,14 +65,43 @@ $content-title--color: #eeeff5;
       margin: 0 auto;
     }
     
-    & .contactCard__avatar{  
-      & img {   
-        width:64px;
+    & .contactCard__avatar{
+        background: url("/img/contacts.jpg") no-repeat;
+        width: 42px;
+        height: 42px;
+        background-size: 249px;
         border-radius: 50%;
+        
+        &.smile {
+          background-position: -31px -29px;
+        }
+        &.sad {
+          background-position: -104px -29px;
+        }
+        &.indifferent {
+          background-position: -176px -29px;
+        }
+        &.chagrined {
+          background-position: -31px -104px;
+        }
+        &.gleeful {
+          background-position: -104px -104px;
+        }
+        &.shocked {
+          background-position: -176px -104px;
+        }
+        &.surprised {
+          background-position: -31px -179px;
+        }
+        &.happy {
+          background-position: -104px -179px;
+        }
+        &.disgusted {
+          background-position: -176px -179px;
+        }
       }
     }
   }
-}
 
 .contentPane {
   height: 70vh;
