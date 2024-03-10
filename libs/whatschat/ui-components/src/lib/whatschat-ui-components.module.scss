@@ -5,14 +5,19 @@ $contactCard__background-color--odd-higlight: lighten($contactCard__background-c
 $contactCard__background-color--even-selected: darken($contactCard__background-color--even, 40%);
 $contactCard__background-color--odd-selected: darken($contactCard__background-color--odd, 40%);
 $content-title__background--color: #aeb3e3;
-$content-title--color: #eeeff5;
+$chat-bubble__component__background--color: #b9cbe8;
+$my-chat-bubble__component__background--color: #feffea;
+$my-chat-bubble__component__text--color-light: #7d829f;
+$my-chat-bubble__component__text--color-dark: black;
+$content-title--color: #fdfded;
+
 
 * {
  font-family: Roboto;
  font-weight: 400;
 }
 
-.leftPane, .contentPane, .textField, .contentHeader {
+.leftPane, .contentPane, .textField, .contentHeader, .chatBubbleComponent {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 21px 20px 16px -21px lightgray;
@@ -119,11 +124,15 @@ $content-title--color: #eeeff5;
 }
 
 .contentHeader {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+  box-shadow: none;
   height: 5vh;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: $content-title__background--color;
-  color: $content-title--color;
+  // background-image: linear-gradient(to bottom, $content-title__background--color,white);
+  // color: $content-title--color;
   
   & .contentTitle {
     font-family: "Architects Daughter", cursive;
@@ -131,6 +140,32 @@ $content-title--color: #eeeff5;
     font-style: normal;
     font-size: 3rem;
     text-align: center;
-  }
+  } 
+}
+.chatBubbleComponent, .myChatBubbleComponent { 
+  width: 95%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: $chat-bubble__component__background--color;
+  color: red;
+  height:10vh;
+  margin-right: 1rem;
   
+  &.myChatBubbleComponent {
+    background-color: $my-chat-bubble__component__background--color;
+    margin-right: 0rem;
+    width: 100%;
+
+  }
+    & .chatBubbleDateTimeStamp, .chatBubbleContent {
+        color: $my-chat-bubble__component__text--color-light;
+        font-weight: 400;
+        margin-left: 1rem;
+        padding-top: 1rem;
+      }
+    & .chatBubbleContent {
+      color: $my-chat-bubble__component__text--color-dark;
+      font-size: 1.5rem;
+    }
+
 }

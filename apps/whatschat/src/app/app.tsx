@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
-import { LeftPane } from '@ui-components';
+import { ChatBubbleComponent, LeftPane } from '@ui-components';
 import { ContactCard }from '@ui-components';
 import { Avatar }from '@ui-components';
 import { ContentPane }from '@ui-components';
@@ -34,7 +34,6 @@ export function App() {
         selectContactCard={(id: number) => setSelectedUser(id)}
         isSelected={selectedUser === user.id}
         >
-          <Avatar url={user.url} alt={user.alt}></Avatar>
         </ContactCard>
     )
     : [];
@@ -48,11 +47,13 @@ export function App() {
       </Grid>
       <Grid item xs={9}>
         <Grid item xs={12}>
-          <ContentHeader title="Whatschat???">
+          <ContentHeader title="Whatschat">
           </ContentHeader>
         </Grid>
         <Grid item xs={12}>
           <ContentPane>
+          <ChatBubbleComponent content="Hello world!" datetimestamp="2024-03-10 @ 11:23:45" mychat={false}></ChatBubbleComponent>
+          <ChatBubbleComponent content="Hello Moon!" datetimestamp="2024-03-10 @ 11:25:45" mychat={true}></ChatBubbleComponent>
           </ContentPane>
         </Grid>
         <Grid item xs={12}>

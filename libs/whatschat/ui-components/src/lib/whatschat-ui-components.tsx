@@ -30,7 +30,7 @@ type ContactCardProps = {id: number, title: string, isSelected: boolean, selectC
 export function ContactCard(props: PropsWithChildren<ContactCardProps>) {
   const getRandomNumber = (max: number) => Math.floor(Math.random() * max)
   const {id, title, isSelected, selectContactCard, children} = props;
-  const randomStyle = ['smile','sad','indifferent','chagrined','gleeful','shocked','surprised','happy','disgusted'][getRandomNumber(9)];
+  const smiley = ['smile','sad','indifferent','chagrined','gleeful','shocked','surprised','happy','disgusted'][getRandomNumber(9)];
 
   const classes = styles.contactCard +' '+ (isSelected ? styles.selected : '')
   return (
@@ -38,7 +38,7 @@ export function ContactCard(props: PropsWithChildren<ContactCardProps>) {
       className={classes}
       onClick={() => selectContactCard(id)}
       >
-    <div className={styles.contactCard__avatar +' '+ styles[randomStyle]}>{children}</div>
+    <div className={styles.contactCard__avatar +' '+ styles[smiley]} title={smiley}>{children}</div>
     <div className={styles.contactCard__title}>{title}</div>
     </div>)
 }
@@ -78,7 +78,8 @@ export function ChatBubbleComponent(props: ChatBubbleComponentProps){
   const {content, datetimestamp, mychat} = props;
   return (
     <div className={mychat ? styles.myChatBubbleComponent + '' : styles.chatBubbleComponent  + ''}>
-
+      <div className={styles.chatBubbleDateTimeStamp}>{datetimestamp}</div>
+      <div className={styles.chatBubbleContent}>{content}</div>
     </div>
   );
 }
