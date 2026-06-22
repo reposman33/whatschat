@@ -49,24 +49,60 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "nx.json",
-        "hash": "3275251376653527109"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "17425123947026961272"
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       },
       {
         "file": "tsconfig.base.json",
         "hash": "17643399306302725577"
       },
       {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3275251376653527109"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "package.json",
+        "hash": "17541317835100629588"
+      },
+      {
+        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-4-1.md",
+        "hash": "16057678487630493119"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "13258325514736837863"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
         "file": "package-lock.json",
         "hash": "1730613777764328177"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-4.md",
+        "hash": "12319080670519228008"
+      },
+      {
+        "file": "README.md",
+        "hash": "10501371102487535312"
       },
       {
         "file": ".eslintrc.json",
@@ -77,52 +113,16 @@
         "hash": "18234343250335250711"
       },
       {
-        "file": "README.md",
-        "hash": "10501371102487535312"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "13258325514736837863"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
         "file": ".gitignore",
         "hash": "10386640370339513548"
       },
       {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": "package.json",
-        "hash": "17541317835100629588"
-      },
-      {
-        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-4.md",
-        "hash": "12319080670519228008"
-      },
-      {
-        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-4-1.md",
-        "hash": "16057678487630493119"
+        "file": ".vscode/extensions.json",
+        "hash": "17425123947026961272"
       },
       {
         "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-3.md",
         "hash": "12141843915462248462"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
       }
     ],
     "projectFileMap": {
@@ -194,96 +194,6 @@
           "hash": "622485232520597903"
         }
       ],
-      "whatsup": [
-        {
-          "file": "apps/whatsup/eslint.config.cjs",
-          "hash": "6904590451111583795",
-          "deps": [
-            "npm:@nx/eslint-plugin"
-          ]
-        },
-        {
-          "file": "apps/whatsup/project.json",
-          "hash": "9006250821005281037"
-        },
-        {
-          "file": "apps/whatsup/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/whatsup/src/app/app.config.ts",
-          "hash": "17072567673578843235",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/whatsup/src/app/app.html",
-          "hash": "11987652264972370457"
-        },
-        {
-          "file": "apps/whatsup/src/app/app.routes.ts",
-          "hash": "6185150965714414910",
-          "deps": [
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/whatsup/src/app/app.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/whatsup/src/app/app.spec.ts",
-          "hash": "18242847248981077524",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "apps/whatsup/src/app/app.ts",
-          "hash": "14355448270397026481",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/whatsup/src/app/nx-welcome.ts",
-          "hash": "7632412639231089802",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
-          ]
-        },
-        {
-          "file": "apps/whatsup/src/index.html",
-          "hash": "17546931587598217992"
-        },
-        {
-          "file": "apps/whatsup/src/main.ts",
-          "hash": "3820470197416434450",
-          "deps": [
-            "npm:@angular/platform-browser"
-          ]
-        },
-        {
-          "file": "apps/whatsup/src/styles.scss",
-          "hash": "5195668842064076916"
-        },
-        {
-          "file": "apps/whatsup/tsconfig.app.json",
-          "hash": "6177249052850704942"
-        },
-        {
-          "file": "apps/whatsup/tsconfig.json",
-          "hash": "16004134237605501702"
-        },
-        {
-          "file": "apps/whatsup/tsconfig.spec.json",
-          "hash": "17489296883266577896"
-        }
-      ],
       "whatschat-e2e": [
         {
           "file": "apps/whatschat-e2e/.eslintrc.json",
@@ -324,39 +234,6 @@
         {
           "file": "apps/whatschat-e2e/tsconfig.json",
           "hash": "10740392072068377465"
-        }
-      ],
-      "whatsup-e2e": [
-        {
-          "file": "apps/whatsup-e2e/eslint.config.cjs",
-          "hash": "18110890943088794707",
-          "deps": [
-            "npm:eslint-plugin-playwright"
-          ]
-        },
-        {
-          "file": "apps/whatsup-e2e/playwright.config.mts",
-          "hash": "16037796875788765219",
-          "deps": [
-            "npm:@playwright/test",
-            "npm:@nx/playwright",
-            "npm:@nx/devkit"
-          ]
-        },
-        {
-          "file": "apps/whatsup-e2e/project.json",
-          "hash": "2137422019528723855"
-        },
-        {
-          "file": "apps/whatsup-e2e/src/example.spec.ts",
-          "hash": "16019101014373124625",
-          "deps": [
-            "npm:@playwright/test"
-          ]
-        },
-        {
-          "file": "apps/whatsup-e2e/tsconfig.json",
-          "hash": "10781023582241775611"
         }
       ],
       "whatschat": [
