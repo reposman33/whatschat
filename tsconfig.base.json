@@ -13,10 +13,9 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
     "paths": {
-      "@images": ["apps/whatschat/public/img"],
-      "@ui-components": ["libs/whatschat/ui-components/src/index.ts"]
+      "@images": ["./apps/whatschat/public/img"],
+      "@ui-components": ["./libs/whatschat/ui-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

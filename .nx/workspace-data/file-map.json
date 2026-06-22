@@ -1,0 +1,454 @@
+{
+  "version": "6.0",
+  "nxVersion": "23.0.0",
+  "pathMappings": {
+    "@images": [
+      "./apps/whatschat/public/img"
+    ],
+    "@ui-components": [
+      "./libs/whatschat/ui-components/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "previewTargetName": "preview",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "serveStaticTargetName": "serve-static"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/cypress/plugin",
+      "options": {
+        "targetName": "e2e",
+        "componentTestingTargetName": "component-test"
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "name": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3275251376653527109"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "17425123947026961272"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "17643399306302725577"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1730613777764328177"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "17866138117546000433"
+      },
+      {
+        "file": "AGENTS.md",
+        "hash": "18234343250335250711"
+      },
+      {
+        "file": "README.md",
+        "hash": "10501371102487535312"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "13258325514736837863"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10386640370339513548"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "package.json",
+        "hash": "17541317835100629588"
+      },
+      {
+        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-4.md",
+        "hash": "12319080670519228008"
+      },
+      {
+        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-4-1.md",
+        "hash": "16057678487630493119"
+      },
+      {
+        "file": "tools/ai-migrations/@nx/vite/23.0.0/ai-instructions-for-vitest-3.md",
+        "hash": "12141843915462248462"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      }
+    ],
+    "projectFileMap": {
+      "whatschat-ui-components": [
+        {
+          "file": "libs/whatschat/ui-components/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/whatschat/ui-components/.eslintrc.json",
+          "hash": "15946965712701950674"
+        },
+        {
+          "file": "libs/whatschat/ui-components/README.md",
+          "hash": "3529111396096019917"
+        },
+        {
+          "file": "libs/whatschat/ui-components/jest.config.ts",
+          "hash": "3964212696662611042"
+        },
+        {
+          "file": "libs/whatschat/ui-components/postcss.config.js",
+          "hash": "2759402739052110475"
+        },
+        {
+          "file": "libs/whatschat/ui-components/project.json",
+          "hash": "2714002248588283856"
+        },
+        {
+          "file": "libs/whatschat/ui-components/src/index.ts",
+          "hash": "1609374893789088615"
+        },
+        {
+          "file": "libs/whatschat/ui-components/src/lib/whatschat-ui-components.module.scss",
+          "hash": "13840933419632352372"
+        },
+        {
+          "file": "libs/whatschat/ui-components/src/lib/whatschat-ui-components.spec.tsx",
+          "hash": "2682742760774959761",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "libs/whatschat/ui-components/src/lib/whatschat-ui-components.tsx",
+          "hash": "16861638830853639243",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/whatschat/ui-components/tailwind.config.js",
+          "hash": "13090734457927965885",
+          "deps": [
+            "npm:@nx/react"
+          ]
+        },
+        {
+          "file": "libs/whatschat/ui-components/tsconfig.json",
+          "hash": "5803453740373313970"
+        },
+        {
+          "file": "libs/whatschat/ui-components/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        },
+        {
+          "file": "libs/whatschat/ui-components/tsconfig.spec.json",
+          "hash": "622485232520597903"
+        }
+      ],
+      "whatsup": [
+        {
+          "file": "apps/whatsup/eslint.config.cjs",
+          "hash": "6904590451111583795",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/whatsup/project.json",
+          "hash": "9006250821005281037"
+        },
+        {
+          "file": "apps/whatsup/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/whatsup/src/app/app.config.ts",
+          "hash": "17072567673578843235",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/whatsup/src/app/app.html",
+          "hash": "11987652264972370457"
+        },
+        {
+          "file": "apps/whatsup/src/app/app.routes.ts",
+          "hash": "6185150965714414910",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/whatsup/src/app/app.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/whatsup/src/app/app.spec.ts",
+          "hash": "18242847248981077524",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/whatsup/src/app/app.ts",
+          "hash": "14355448270397026481",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/whatsup/src/app/nx-welcome.ts",
+          "hash": "7632412639231089802",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/whatsup/src/index.html",
+          "hash": "17546931587598217992"
+        },
+        {
+          "file": "apps/whatsup/src/main.ts",
+          "hash": "3820470197416434450",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/whatsup/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/whatsup/tsconfig.app.json",
+          "hash": "6177249052850704942"
+        },
+        {
+          "file": "apps/whatsup/tsconfig.json",
+          "hash": "16004134237605501702"
+        },
+        {
+          "file": "apps/whatsup/tsconfig.spec.json",
+          "hash": "17489296883266577896"
+        }
+      ],
+      "whatschat-e2e": [
+        {
+          "file": "apps/whatschat-e2e/.eslintrc.json",
+          "hash": "14060216369337943343"
+        },
+        {
+          "file": "apps/whatschat-e2e/cypress.config.ts",
+          "hash": "8815329580267567259",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/whatschat-e2e/project.json",
+          "hash": "4048401536469883924"
+        },
+        {
+          "file": "apps/whatschat-e2e/src/e2e/app.cy.ts",
+          "hash": "5027633634106912177"
+        },
+        {
+          "file": "apps/whatschat-e2e/src/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "apps/whatschat-e2e/src/support/app.po.ts",
+          "hash": "11157016311132186162"
+        },
+        {
+          "file": "apps/whatschat-e2e/src/support/commands.ts",
+          "hash": "5397443931564808659"
+        },
+        {
+          "file": "apps/whatschat-e2e/src/support/e2e.ts",
+          "hash": "1054106023200826784"
+        },
+        {
+          "file": "apps/whatschat-e2e/tsconfig.json",
+          "hash": "10740392072068377465"
+        }
+      ],
+      "whatsup-e2e": [
+        {
+          "file": "apps/whatsup-e2e/eslint.config.cjs",
+          "hash": "18110890943088794707",
+          "deps": [
+            "npm:eslint-plugin-playwright"
+          ]
+        },
+        {
+          "file": "apps/whatsup-e2e/playwright.config.mts",
+          "hash": "16037796875788765219",
+          "deps": [
+            "npm:@playwright/test",
+            "npm:@nx/playwright",
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "apps/whatsup-e2e/project.json",
+          "hash": "2137422019528723855"
+        },
+        {
+          "file": "apps/whatsup-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625",
+          "deps": [
+            "npm:@playwright/test"
+          ]
+        },
+        {
+          "file": "apps/whatsup-e2e/tsconfig.json",
+          "hash": "10781023582241775611"
+        }
+      ],
+      "whatschat": [
+        {
+          "file": "apps/whatschat/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "apps/whatschat/index.html",
+          "hash": "14244981872000227731"
+        },
+        {
+          "file": "apps/whatschat/project.json",
+          "hash": "11521459333797928045"
+        },
+        {
+          "file": "apps/whatschat/public/api/users.json",
+          "hash": "4300555682845500971"
+        },
+        {
+          "file": "apps/whatschat/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/whatschat/public/img/contacts.jpg",
+          "hash": "6140500856649724342"
+        },
+        {
+          "file": "apps/whatschat/src/app/app.module.scss",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/whatschat/src/app/app.spec.tsx",
+          "hash": "5483097875245063936",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/whatschat/src/app/app.tsx",
+          "hash": "2330443494980066468",
+          "deps": [
+            "whatschat-ui-components",
+            "npm:@mui/material",
+            "npm:axios",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/whatschat/src/app/nx-welcome.tsx",
+          "hash": "729168762476089670"
+        },
+        {
+          "file": "apps/whatschat/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/whatschat/src/main.tsx",
+          "hash": "14600487695901020789",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@fontsource/roboto"
+          ]
+        },
+        {
+          "file": "apps/whatschat/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/whatschat/tsconfig.app.json",
+          "hash": "7232119452847825095"
+        },
+        {
+          "file": "apps/whatschat/tsconfig.json",
+          "hash": "11166545116916107487"
+        },
+        {
+          "file": "apps/whatschat/tsconfig.spec.json",
+          "hash": "9472099605191632308"
+        },
+        {
+          "file": "apps/whatschat/vite.config.ts",
+          "hash": "426579332075868548",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "9488873860727083949"
+}
